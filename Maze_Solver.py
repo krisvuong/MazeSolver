@@ -5,26 +5,6 @@
 from random import randint
 import Draw_Maze
 
-# QUESTIONS
-"""
-What happens if instead of searching in the order North, East, South, West, FIND PATH searches North, South, East, West?
-- A solution will still be found, but the algorithm searches the possible paths in a different order
-- The time taken to find the solution path may vary
-
-When FIND-PATH returns False, does that mean there is no path from the start to the goal?
-- False is returned when the CURRENT path meets a wall or a pathway already taken
-- A False return value means that the current path is not the correct solution
-- The find_path method recurses until it finds the correct pathway, then it returns True
-- If the FINAL return of find_path is False, then there is no path from the start to the goal
-    - But the maze generator provided always has a solution 
-
-Can parts of the maze be searched by FIND-PATH more than once? How does the algorithm deal with this situation?
-- No
-- Everytime a path is reached, the string in this position is changed to "+"
-- One of the base cases checks if the next desired position is "+"
-    - If this is True, then this pathway is returned as False
-    - This prevents the algorithm from traversing the same path more than once
-"""
 
 
 class MazeSolver:
